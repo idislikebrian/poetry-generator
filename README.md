@@ -1,8 +1,5 @@
 # poetry-generator
 
-[![GitHub issues](https://img.shields.io/github/issues/PraveenKumarSridhar/poetry-generator?style=for-the-badge)](https://github.com/PraveenKumarSridhar/poetry-generator/issues)
-[![GitHub forks](https://img.shields.io/github/forks/PraveenKumarSridhar/poetry-generator?style=for-the-badge)](https://github.com/PraveenKumarSridhar/poetry-generator/network)
-[![GitHub stars](https://img.shields.io/github/stars/PraveenKumarSridhar/poetry-generator?style=for-the-badge)](https://github.com/PraveenKumarSridhar/poetry-generator/stargazers)
 [![GitHub license](https://img.shields.io/github/license/PraveenKumarSridhar/poetry-generator?style=for-the-badge)](https://github.com/PraveenKumarSridhar/poetry-generator/blob/master/LICENSE)
 
 Train a model using TensorFlow to write short poems.
