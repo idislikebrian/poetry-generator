@@ -12,31 +12,31 @@ from tensorflow.keras import regularizers
 import tensorflow.keras.utils as ku
 import numpy as np
 
-# ## data mining ##
-# element = "https://poets.org/poems/pablo-neruda"
-# poet = requests.get(element)
-# poetData = BeautifulSoup(poet.content, 'html.parser')
-# rowData = poetData.find("tbody", attrs={"role":"rowgroup"})
-# poems = rowData.find_all("td", attrs={"data-label":"Title"})
-# poemList = []
-# for tag in rowData.find_all('a', href=True):
-#     poemList.append(str(tag['href']))
-# counter = 0
-# for x in poemList:
-#     if counter %2 == 0:
-#         time.sleep(3)
-#         poemURL = "https://poets.org{}".format(x)
-#         search = requests.get(poemURL)
-#         poetry = BeautifulSoup(search.content, 'html.parser')
-#         poemTitle = poetry.find("h1", attrs={"class":"card-title"})
-#         lyrics = poetry.find("div", attrs={"class":"poem__body px-md-4 font-serif"})
-#         ## append to text file ##
-#         f = open("poets\pablo-neruda.txt", "a")
-#         f.write(str(poemTitle.text) + "\n \n" + str(lyrics.text) + "\n" + "---" + "\n" )
-#     counter += 1
+## data mining ##
+element = "https://poets.org/poems/pablo-neruda" ## insert poet's page from poets.org
+poet = requests.get(element)
+poetData = BeautifulSoup(poet.content, 'html.parser')
+rowData = poetData.find("tbody", attrs={"role":"rowgroup"})
+poems = rowData.find_all("td", attrs={"data-label":"Title"})
+poemList = []
+for tag in rowData.find_all('a', href=True):
+    poemList.append(str(tag['href']))
+counter = 0
+for x in poemList:
+    if counter %2 == 0:
+        time.sleep(3)
+        poemURL = "https://poets.org{}".format(x)
+        search = requests.get(poemURL)
+        poetry = BeautifulSoup(search.content, 'html.parser')
+        poemTitle = poetry.find("h1", attrs={"class":"card-title"})
+        lyrics = poetry.find("div", attrs={"class":"poem__body px-md-4 font-serif"})
+        ## append to text file ##
+        f = open("src\poems\data\pablo-neruda.txt", "a")
+        f.write(str(poemTitle.text) + "\n \n" + str(lyrics.text) + "\n" + "---" + "\n" )
+    counter += 1
 
 ## learning ##
-data = open('poets\pablo-neruda.txt').read()
+data = open('src\poems\data\pablo-neruda.txt').read()
 data[0:300]
 
 tokenizer = Tokenizer()
