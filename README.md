@@ -2,32 +2,26 @@
 
 [![GitHub license](https://img.shields.io/github/license/PraveenKumarSridhar/poetry-generator?style=for-the-badge)](https://github.com/PraveenKumarSridhar/poetry-generator/blob/master/LICENSE)
 
-Train a model using TensorFlow to write short poems.
+Mine a poets poetry from [poets.org](https://poets.org) then use that collection of poetry to train a model using TensorFlow to write short poems.
 
-Check out the medium post for a detailed expaination [here](https://medium.com/@prasri.pk/can-we-write-a-sonnet-like-its-the-middle-ages-f3c06ecb690).
+Check out the medium post that I followed to set up the TensorFlow part [here](https://medium.com/@prasri.pk/can-we-write-a-sonnet-like-its-the-middle-ages-f3c06ecb690).
 
-Link to the notebook [here](https://github.com/PraveenKumarSridhar/poetry-generator/blob/master/src/Sonnets/Training/Sonnet_generator.ipynb)
 
 ## DATA:
 <hr/>
 
-You can get the data used from training from [here](http://www.shakespeares-sonnets.com/all.php). A sample of this data would look like:
+The data used is scraped with [BeautifulSoup 4.9.0](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) from poets.org. A sample of this data for example, from Pablo Neruda would look like:
 
 ```
-From fairest creatures we desire increase,
-That thereby beauty's rose might never die,
-But as the riper should by time decease,
-His tender heir might bear his memory:
-But thou contracted to thine own bright eyes,
-Feed'st thy light's flame with self-substantial fuel,
-Making a famine where abundance lies,
-Thy self thy foe, to thy sweet self too cruel:
-Thou that art now the world's fresh ornament,
-And only herald to the gaudy spring,
-Within thine own bud buriest thy content,
-And, tender churl, mak'st waste in niggarding:
-Pity the world, or else this glutton be,
-To eat the world's due, by the grave and thee.
+Today is dead winter in the forgotten land
+that comes to visit me, with a cross on the map
+and a volcano in the snow, to return to me,
+to return again the water
+fallen on the roof of my childhood.
+Today when the sun began with its shafts
+to tell the story, so clear, so old,
+the slanting rain fell like a sword,
+the rain my hard heart welcomes.
 ```
 
 ## Environment and tools Used:
@@ -39,6 +33,11 @@ To eat the world's due, by the grave and thee.
 3. Matplotlib
 4. Tensorflow
 ```
+Plus...
+
+```
+5. BeautifulSoup
+```
 
 ## Required package installation:
 <hr/>
@@ -47,8 +46,13 @@ To eat the world's due, by the grave and thee.
 pip install tensorflow==2.1.0
 pip install numpy
 ```
+As well as..
 
-## Results
+```
+pip install beautifulsoup4
+```
+
+## Results (via PraveenKumarSridhar)
 <hr/>
 
 ### Character level 
